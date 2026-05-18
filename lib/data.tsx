@@ -63,10 +63,10 @@ export const PROJECTS: Project[] = [
     overview: "Sports news platform serving 2M+ users.",
     
     sections: [
-      { type: "text", title: "The Challenge", 
-        content: "F1 content is dense — stats, updates, and race insights often feel scattered and hard to consume. Users want quick insights without losing depth, especially during live or high-intensity moments.." 
-      }
-      ,{
+      { type: "text", title: "The Challenge",
+        content: "F1 content is dense — stats, updates, and race insights often feel scattered and hard to consume. Users want quick insights without losing depth, especially during live or high-intensity moments.."
+      },
+      {
         type: "text",
         title: "How we encountered",
         content: "I focused on simplifying how information is presented — structuring content into clear sections, improving visual hierarchy, and making scanning effortless. The goal was to balance data-heavy content with readability, so users can quickly understand what matters without feeling overwhelmed."
@@ -92,24 +92,54 @@ export const PROJECTS: Project[] = [
     ]
   },
     {
-    slug: "",
+    slug: "Glocoach",
     title: "Glocoach",
     description:
       "Designed and built a personal note-taking app for deep work — minimal, keyboard-first, and fast. Ships as a native macOS app.",
     year: "2023",
     tags: ["macOS", "Side Project"],
     placeholderClass: "bg-[#e8f0fe]",
-    placeholderContent: undefined,
-    heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1920&q=80",
-    role: "Designer & Developer",
-    timeline: "2023",
-    team: ["Solo project"],
-    overview: "Minimal, keyboard-first note-taking app for deep work.",
+    placeholderContent: "Lance Cover.png",
+    heroImage: "/images/lance hero 1.png",
+    role: "UX UI Designer ",
+    timeline: "2024",
+    team: ["2 Designers", "2 Engineers"],
+    overview: "Lance is an AI-powered coaching assistant built for GloCoach to help users identify strengths, blind spots, and growth areas through personalized assessments and Talent Builder Matrix reports.",
     sections: [
-      { type: "text", title: "Philosophy", content: "Minimal and fast, keyboard-centric design." }
+      { type: "text", title: "The Challenge", content: "Corporate coaching platforms often feel complex and overwhelming. The challenge was creating an experience that could simplify assessments, make AI interactions feel natural, and present detailed insights in an easy-to-understand format." },
+      { type: "text", title: "How we encountered", content: "I designed a mobile-first experience focused on clarity and guided interactions. From onboarding to voice-based AI assessments and report generation, every flow was structured to feel seamless and approachable. The Talent Builder Matrix helped transform complex behavioral analysis into a clean, digestible experience." },
+    
+       {
+        type: "text",
+        title: "Impact",
+        content: `- Simplified AI-driven coaching workflows
+- Improved accessibility of behavioral insights
+- Created a more intuitive and engaging assessment experience`
+      },
+       {
+        type: "text",
+        title: "Check this out ",
+        content: "Here you can see the product .",
+        linkUrl: "https://www.glocoach.com/"
+      },
+      {
+        type: "image",
+        src: "/images/Lance App 1.png",
+        alt: "Lance App screenshot 1"
+      },
+      {
+        type: "image",
+        src: "/images/Lance App 2.png",
+        alt: "Lance App screenshot 2"
+      },
+      {
+        type: "image",
+        src: "/images/Lance App 3.png",
+        alt: "Lance App screenshot 3"
+      },
     ]
   },
-  {
+    {
     slug: "orbit-analytics",
     title: "Rural Development (UX Research)",
     description:
@@ -125,8 +155,8 @@ export const PROJECTS: Project[] = [
     overview: "A research-driven project focused on understanding how design can help promote sustainable rural tourism in Bisoi, a small village in Uttarakhand. The project explored how digital experiences could create awareness while preserving the village’s local identity and culture.",
     sections: [
       { type: "text", title: "The Challenge", 
-        content: "Bisoi had tourism potential, but most visitors only knew about a single attraction. The bigger challenge was understanding local behavior, traveler expectations, and how to create awareness without disrupting the authenticity of the place." }
-      ,{
+        content: "Bisoi had tourism potential, but most visitors only knew about a single attraction. The bigger challenge was understanding local behavior, traveler expectations, and how to create awareness without disrupting the authenticity of the place." },
+      {
         type: "text",
         title: "How we encountered",
         content: "We conducted on-ground research, interviews, and behavioral analysis to identify opportunities around rural tourism and digital accessibility. The final solution focused on showcasing local experiences, improving discoverability, and creating a more structured travel experience around the village ecosystem."
@@ -144,7 +174,7 @@ export const PROJECTS: Project[] = [
         content: "Here you can see the project .",
         linkUrl: "https://www.behance.net/gallery/171121323/UX-Research-Rural-Development-in-Bisoi"
       },
-      ,{
+      {
         type: "text",
         title: "Some Solution Glimpse",
         content: "Here are some glimpses of the solution that we proposed to ministry of tourism of Uttarakhand later also."
@@ -212,8 +242,9 @@ export interface SocialLink {
 }
 
 export const SOCIAL_LINKS = [
-  { label: "Email", href: "mailto:alex@example.com", icon: "email" },
-  { label: "X / Twitter", href: "https://x.com", icon: "x" },
-  { label: "GitHub", href: "https://github.com", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
+  { label: "Email", href: "arunrathore127@gmail.com.com", icon: "email" },
+   { label: "Behance", href: "https://www.behance.net/arunrathore127", icon: "behance" },
+   { label: "Behance", href: "https://www.behance.net/arunrathore127", icon: "behance" },
+   
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/arun-pratap-singh-rathore-973601212/", icon: "linkedin" },
 ] as const;

@@ -6,36 +6,36 @@ import { PROJECTS, ESSAYS, SOCIAL_LINKS } from "@/lib/data";
 
 const LIFE_PHOTOS = [
   {
-    src: "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 1.png",
     alt: "A quiet street at dusk",
   },
   {
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 2.png",
     alt: "A candid city moment",
   },
   {
-    src: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 3.png",
     alt: "A travel snapshot",
   },
   {
-    src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 4.png",
     alt: "A night out with friends",
   },
   {
-    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 5.png",
     alt: "A moment in nature",
   },
   {
-    src: "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=900&q=80",
+    src: "/images/A 6.png",
     alt: "An everyday detail",
   },
 ];
 
 /* ── Social icon map ─────────────────────────────────────── */
 function SocialIcon({ icon }: { icon: string }) {
-  if (icon === "email") return <Mail size={14} />;
-  if (icon === "github") return <Github size={14} />;
-  if (icon === "linkedin") return <Linkedin size={14} />;
+  // if (icon === "email") return <Mail size={14} />;
+  // if (icon === "github") return <Github size={14} />;
+  // if (icon === "linkedin") return <Linkedin size={14} />;
   // X / Twitter
   return (
     <svg
@@ -45,7 +45,7 @@ function SocialIcon({ icon }: { icon: string }) {
       fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      {/* <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /> */}
     </svg>
   );
 }
@@ -216,7 +216,7 @@ If you’re building something ambitious and care about craft, I’d love to hea
               </h2>
               <p>
                 Photos I clicked along the way — small snapshots of travel,
-                people, streets, and everyday details that still feel like home.
+                people and everyday details that still feel like home.
               </p>
             </div>
           </FadeUp>
