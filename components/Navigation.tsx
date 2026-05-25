@@ -27,6 +27,13 @@ export default function Navigation() {
   ) => {
     e.preventDefault();
     const id = href.replace("#", "");
+    
+    // If on a different page, navigate to home first
+    if (window.location.pathname !== "/") {
+      window.location.href = href;
+      return;
+    }
+    
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
