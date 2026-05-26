@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import Marquee from "@/components/Marquee";
 import ProjectCard from "@/components/ProjectCard";
 import FadeUp from "@/components/FadeUp";
 import { PROJECTS, ESSAYS, SOCIAL_LINKS } from "@/lib/data";
@@ -101,6 +102,9 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="w-screen relative left-[50%] -translate-x-[50%] mt-20 mb-4">
+          <Marquee />
+        </div>
 
         {/* ── WORK ─────────────────────────────────────────── */}
         <section id="work" className="py-20">
