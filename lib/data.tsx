@@ -205,34 +205,30 @@ export interface Essay {
 export const ESSAYS: Essay[] = [
   {
     title: "Vibecoding Is Changing How Product Designers Work",
-    href: "#",
+    href: "https://medium.com/@arunrathore127/vibecoding-is-changing-how-product-designers-work-7daf750752cd",
     date: "Mar 2026",
   },
   {
-    title: "Why great products feel inevitable in retrospect",
-    href: "#",
+    title: "“Meet Claude: The New Design Partner Every Product Designer Needs”",
+    href: "https://medium.com/@arunrathore127/meet-claude-the-new-design-partner-every-product-designer-needs-f3c88fec0b15",
+    date: "Feb 2026",
+  },
+  {
+    title: "How Delhi Metro Stations Teach Us About Wayfinding in UX",
+    href: "https://medium.com/@arunrathore127/how-delhi-metro-stations-teach-us-about-wayfinding-in-ux-a47440afbac0",
+    date: "Nov 2025",
+  },
+  {
+    title: "“Are Design Tasks Just Free Labor? Let’s Talk.”",
+    href: "https://medium.com/@arunrathore127/are-design-tasks-just-free-labor-lets-talk-b377c6d334ec",
+    date: "April 2025",
+  },
+  {
+    title: "Embracing Design Critiques",
+    href: "https://medium.com/@arunrathore127/embracing-design-critiques-0d06a6e16bde",
     date: "Jan 2025",
   },
-  {
-    title: "Designing for forgetting",
-    href: "#",
-    date: "Oct 2024",
-  },
-  {
-    title: "The case for constraints: why less scope ships faster",
-    href: "#",
-    date: "Jul 2024",
-  },
-  {
-    title: "What a morning run taught me about user flows",
-    href: "#",
-    date: "Mar 2024",
-  },
-  {
-    title: "Notes on shipping your first thing in code",
-    href: "#",
-    date: "Nov 2023",
-  },
+ 
 ];
 
 export interface SocialLink {

@@ -1,8 +1,10 @@
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Marquee from "@/components/Marquee";
+import PhotoMarquee from "@/components/PhotoMarquee";
 import ProjectCard from "@/components/ProjectCard";
 import FadeUp from "@/components/FadeUp";
+import Process from "@/components/Process";
 import { PROJECTS, ESSAYS, SOCIAL_LINKS } from "@/lib/data";
 
 const LIFE_PHOTOS = [
@@ -57,7 +59,7 @@ export default function Home() {
     <>
       <Navigation />
 
-      <main className="mx-auto max-w-[1200px] px-6 sm:px-10">
+      <main className="w-full px-4 md:px-8 lg:px-12">
 
         {/* ── HERO ─────────────────────────────────────────── */}
         <section
@@ -150,54 +152,16 @@ export default function Home() {
           </ul>
         </section>
 
-        <hr className="border-[#e4e4e4]" />
 
-        {/* ── STORY ────────────────────────────────────────── */}
-        <section id="story" className="py-20">
-          <FadeUp>
-            <p className="mb-12 text-[24px] font-semibold uppercase tracking-[0.12em] text-muted">
-              Story
-            </p>
-          </FadeUp>
 
-          <FadeUp delay={0.1}>
-            <div className="space-y-5 text-[16px] font-light leading-[1.8] text-ink max-w-[600px]">
-              <p>
-                My design journey started randomly — clicking on a college link about UX design, to now building and shipping real products.
-              </p>
+        {/* ── PROCESS ──────────────────────────────────────── */}
+        <div className="w-screen relative left-[50%] -translate-x-[50%]">
+          <Process />
+        </div>
 
-              <blockquote
-                className="border-l-2 border-ink pl-6 text-balance leading-[1.4] tracking-[-0.01em]"
-                style={{
-                  fontFamily: '"Instrument Serif", Georgia, serif',
-                  fontStyle: "italic",
-                  fontSize: "clamp(1.25rem, 3vw, 1.75rem)",
-                }}
-              >
-                &ldquo;“I didn’t plan to become a designer — I grew into it.”&rdquo;
-              </blockquote>
 
-              <p>
-               With a background in Design, I work at the intersection of logic and intuition — crafting simple, scalable experiences. I’ve built products from 0→1, including Viacation, across travel and sports.
-If you’re building something ambitious and care about craft, I’d love to hear from you.
-              </p>
 
-              <p>
-                These days I work at Luminary, where I lead design across the
-                product. I&apos;ve shipped mobile apps, design systems, marketing
-                sites, and a handful of side projects I&apos;m quietly proud of.
-                I write occasionally, run badly, and make excellent coffee.
-              </p>
 
-              <p>
-                If you&apos;re working on something ambitious and care about craft,
-                I&apos;d love to hear from you.
-              </p>
-            </div>
-          </FadeUp>
-        </section>
-
-        <hr className="border-[#e4e4e4]" />
 
         {/* ── A LIFE ───────────────────────────────────────────── */}
         <section id="A-Life" className="py-20">
@@ -208,15 +172,15 @@ If you’re building something ambitious and care about craft, I’d love to hea
           </FadeUp>
 
           <FadeUp delay={0.05}>
-            <div className="mb-10 max-w-[680px] space-y-4 text-[16px] font-light leading-[1.8] text-ink">
+            <div className="mb-10 max-w-[680px] space-y-4 text-[16px] font-light leading-[1.8] text-muted">
               <h2
-                className="text-[2.5rem] tracking-[-0.03em]"
+                className="text-[2.5rem] tracking-[-0.03em] text-ink"
                 style={{
                   fontFamily: '"Instrument Serif", Georgia, serif',
                   fontStyle: "italic",
                 }}
               >
-                A wall of moments.
+                
               </h2>
               <p>
                 Photos I clicked along the way — small snapshots of travel,
@@ -225,81 +189,59 @@ If you’re building something ambitious and care about craft, I’d love to hea
             </div>
           </FadeUp>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            {LIFE_PHOTOS.map((photo, i) => (
-              <FadeUp key={photo.src} delay={0.08 * i}>
-                <div className="overflow-hidden rounded-[2rem] bg-[#f5f5f5] shadow-sm transition-transform duration-500 hover:-translate-y-1">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="h-full w-full object-cover"
-                    style={{ aspectRatio: "4 / 5" }}
-                  />
-                </div>
-              </FadeUp>
-            ))}
+          <div className="w-screen relative left-[50%] -translate-x-[50%] mt-12">
+            <PhotoMarquee photos={LIFE_PHOTOS} />
           </div>
         </section>
 
-        <hr className="border-[#e4e4e4]" />
 
-        {/* ── CONNECT ──────────────────────────────────────── */}
-        <section id="connect" className="pb-24 pt-20">
-          <FadeUp>
-            <p className="mb-10 text-[11px] font-medium uppercase tracking-[0.12em] text-muted">
-              Connect
-            </p>
-          </FadeUp>
-
-          <FadeUp delay={0.1}>
-            <h2
-              className="mb-10 text-balance tracking-[-0.025em] text-ink"
-              style={{
-                fontFamily: '"Instrument Serif", Georgia, serif',
-                fontStyle: "italic",
-                fontSize: "clamp(2rem, 6vw, 3.75rem)",
-                lineHeight: 1.1,
-              }}
-            >
-              Let&apos;s make
-              <br />
-              something good.
-            </h2>
-          </FadeUp>
-
-          <FadeUp delay={0.18}>
-            <div className="flex flex-wrap gap-3">
-              {SOCIAL_LINKS.map(({ label, href, icon }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("mailto") ? undefined : "_blank"}
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 rounded-full border border-[#e4e4e4] px-5 py-2 text-[13px] text-ink transition-all duration-200 hover:border-ink hover:bg-ink hover:text-[#fafafa]"
-                >
-                  <SocialIcon icon={icon} />
-                  {label}
-                </a>
-              ))}
-            </div>
-          </FadeUp>
-        </section>
       </main>
 
       {/* ── FOOTER ─────────────────────────────────────────── */}
-      <footer className="border-t border-[#e4e4e4]">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between gap-4 px-6 py-6 sm:px-10">
-          <p className="text-[12px] text-muted">© 2026 Arun Pratap Singh Rathore. All rights reserved.</p>
-          <a
-            href="#hero"
-            className="group flex items-center gap-1 text-[12px] text-muted transition-colors duration-200 hover:text-ink"
+      <footer className="w-screen relative left-[50%] -translate-x-[50%] bg-[#F6F6F6] pt-24 pb-8 flex flex-col justify-between px-4 md:px-8 lg:px-12" style={{ minHeight: "60vh" }}>
+        <div className="flex-1 flex flex-col justify-center w-full">
+          <h2
+            className="uppercase tracking-[-0.04em] leading-[0.85] m-0 p-0 text-center sm:text-left"
+            style={{
+              fontFamily: '"Instrument Serif", Georgia, serif',
+              fontSize: "clamp(3rem, 13.5vw, 12rem)",
+            }}
           >
-            Back to top
-            <ArrowUpRight
-              size={11}
-              className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
+            STAY CURIOUS
+          </h2>
+          <h2
+            className="uppercase tracking-[0.02em] mt-4 text-center sm:text-left"
+            style={{
+              fontFamily: '"Instrument Serif", Georgia, serif',
+              fontSize: "42px",
+            }}
+          >
+            LET&apos;S MAKE SOMETHING GOOD.
+          </h2>
+        </div>
+
+        <div className="mt-32 w-full flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 text-[12px] font-medium uppercase tracking-[0.15em] font-sans">
+          <a href="mailto:ARUNRATHORE127@gmail.com" className="hover:opacity-70 transition-opacity">
+            ARUNRATHORE127@gmail.com
           </a>
+          
+          <ul className="flex flex-wrap justify-center gap-6 sm:gap-8">
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+                LINKEDIN ↗
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+                TWITTER ↗
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+                INSTAGRAM ↗
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </>

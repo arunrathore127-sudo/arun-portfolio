@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 const NAV_LINKS = [
   { label: "Work", href: "#work" },
   { label: "Essay", href: "#essay" },
-  { label: "Story", href: "#story" },
+  { label: "Process", href: "#process" },
   { label: "A Life", href: "#A-Life" },
   { label: "Connect", href: "#connect" },
 ];
@@ -49,7 +49,7 @@ export default function Navigation() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-[1200px] items-center px-6 py-6 sm:px-10">
+      <nav className="flex w-full items-center px-4 py-6 md:px-8 lg:px-12">
         {/* Logo */}
         <a
           href="#hero"

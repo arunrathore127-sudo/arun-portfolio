@@ -23,6 +23,7 @@
     color: var(--ink);
     font-family: "DM Sans", system-ui, sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -52,5 +53,9 @@
 
   .animate-marquee {
     animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee-slow {
+    animation: marquee 15s linear infinite;
   }
 }
