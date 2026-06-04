@@ -104,19 +104,19 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-screen relative left-[50%] -translate-x-[50%] mt-20 mb-4">
+        <div className="w-screen relative left-[50%] -translate-x-[50%] mt-12 mb-4">
           <Marquee />
         </div>
 
         {/* ── WORK ─────────────────────────────────────────── */}
-        <section id="work" className="w-screen relative left-[50%] -translate-x-[50%] py-20">
+        <section id="work" className="w-screen relative left-[50%] -translate-x-[50%] py-12">
           <FeaturedCarousel projects={PROJECTS} />
         </section>
 
       
 
         {/* ── ESSAY ────────────────────────────────────────── */}
-        <section id="essay" className="py-20">
+        <section id="essay" className="py-12">
           <FadeUp>
             <p className="mb-12 text-[24px] font-semibold uppercase tracking-[0.12em] text-muted">
               Essay
@@ -154,7 +154,7 @@ export default function Home() {
 
 
         {/* ── A LIFE ───────────────────────────────────────────── */}
-        <section id="A-Life" className="py-20">
+        <section id="A-Life" className="py-12">
           <FadeUp>
             <p className="mb-12 text-[24px] font-semibold uppercase tracking-[0.12em] text-muted">
               A Life

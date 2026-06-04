@@ -36,7 +36,7 @@ const PROCESS_STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="w-full bg-[#FAFAFA] py-24 my-20">
+    <section id="process" className="w-full bg-[#FAFAFA] py-16 my-12">
       <div className="w-full px-4 md:px-8 lg:px-12">
         
         {/* ── HEADER ─────────────────────────────────────────── */}

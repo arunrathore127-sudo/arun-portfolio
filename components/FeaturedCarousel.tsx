@@ -15,6 +15,7 @@ export default function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(projects.length);
   const [animate, setAnimate] = useState(false);
   const [cardsToShow, setCardsToShow] = useState(3);
+  const [centerOffset, setCenterOffset] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -29,11 +30,14 @@ export default function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setCardsToShow(1); // Mobile
+        setCardsToShow(1.25); // Mobile: scale down to 80% to show edges
+        setCenterOffset((100 - (100 / 1.25)) / 2); // Center the active card
       } else if (window.innerWidth < 1024) {
         setCardsToShow(2); // Tablet
+        setCenterOffset(0);
       } else {
         setCardsToShow(3); // Desktop
+        setCenterOffset(0);
       }
     };
 
@@ -96,7 +100,7 @@ export default function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
         <button
           onClick={prev}
           aria-label="Previous Project"
-          className="absolute left-4 md:left-8 top-[35%] -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white backdrop-blur-md border border-[#e4e4e4] text-ink rounded-full shadow-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
+          className="absolute left-4 md:left-8 top-[35%] -translate-y-1/2 z-20 w-12 h-12 hidden md:flex items-center justify-center bg-white/90 hover:bg-white backdrop-blur-md border border-[#e4e4e4] text-ink rounded-full shadow-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -104,7 +108,7 @@ export default function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
         <button
           onClick={next}
           aria-label="Next Project"
-          className="absolute right-4 md:right-8 top-[35%] -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-white/90 hover:bg-white backdrop-blur-md border border-[#e4e4e4] text-ink rounded-full shadow-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
+          className="absolute right-4 md:right-8 top-[35%] -translate-y-1/2 z-20 w-12 h-12 hidden md:flex items-center justify-center bg-white/90 hover:bg-white backdrop-blur-md border border-[#e4e4e4] text-ink rounded-full shadow-sm transition-all duration-300 opacity-0 group-hover:opacity-100"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -115,7 +119,7 @@ export default function FeaturedCarousel({ projects }: FeaturedCarouselProps) {
               ref={containerRef}
               className="flex"
               style={{
-                transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)`,
+                transform: `translateX(calc(-${currentIndex * (100 / cardsToShow)}% + ${centerOffset}%))`,
                 transition: animate ? "transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)" : "none",
               }}
               onTransitionEnd={handleTransitionEnd}
