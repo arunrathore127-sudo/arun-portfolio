@@ -2,8 +2,8 @@ import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Marquee from "@/components/Marquee";
 import PhotoMarquee from "@/components/PhotoMarquee";
-import ProjectCard from "@/components/ProjectCard";
 import FadeUp from "@/components/FadeUp";
+import FeaturedCarousel from "@/components/FeaturedCarousel";
 import Process from "@/components/Process";
 import { PROJECTS, ESSAYS, SOCIAL_LINKS } from "@/lib/data";
 
@@ -109,18 +109,8 @@ export default function Home() {
         </div>
 
         {/* ── WORK ─────────────────────────────────────────── */}
-        <section id="work" className="py-20">
-          <FadeUp>
-            <p className="mb-12 text-[24px] font-semibold uppercase tracking-[0.12em] text-muted">
-              Work
-            </p>
-          </FadeUp>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {PROJECTS.map((project, i) => (
-              <ProjectCard key={project.title} project={project} index={i} />
-            ))}
-          </div>
+        <section id="work" className="w-screen relative left-[50%] -translate-x-[50%] py-20">
+          <FeaturedCarousel projects={PROJECTS} />
         </section>
 
       
@@ -227,18 +217,18 @@ export default function Home() {
           
           <ul className="flex flex-wrap justify-center gap-6 sm:gap-8">
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+              <a href="https://www.linkedin.com/in/arun-pratap-singh-rathore-973601212/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
                 LINKEDIN ↗
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
-                TWITTER ↗
+              <a href="https://dribbble.com/arunpratap01" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+                DRIBBBLE ↗
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
-                INSTAGRAM ↗
+              <a href="https://www.behance.net/arunprrathore" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity flex items-center gap-1">
+                BEHANCE ↗
               </a>
             </li>
           </ul>
